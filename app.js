@@ -52,7 +52,7 @@ store.on("error",(err)=>{
     console.log("MONGO STORE ERROR",err)
 })
 const sessionOption={
-    store,
+    store:store,
     secret:process.env.SECRET,
     resave:false,
     saveUnintialized:true,
