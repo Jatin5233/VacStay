@@ -93,7 +93,7 @@ app.use("/allListing",listing)
 app.use("/allListing/:id/reviews",review)
 app.use("/",user)
 app.get("/",(req,res)=>{
-    res.send("hello")
+    res.redirect("/allListing")
 })
 
 app.all("*",(req,res,next)=>{
