@@ -92,7 +92,9 @@ app.use((req,res,next)=>{
 app.use("/allListing",listing)
 app.use("/allListing/:id/reviews",review)
 app.use("/",user)
-
+app.get("/",(req,res)=>{
+    res.send(hello)
+})
 
 app.all("*",(req,res,next)=>{
     next(new ExpressError(404,"Page not Found"))
