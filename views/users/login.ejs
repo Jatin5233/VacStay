@@ -1,0 +1,29 @@
+<%-layout("./layouts/boilerplate.ejs")%>
+<body>
+    
+        <form class=" g-3 needs-validation" novalidate action="/login" method="post">
+            <div class="container mt-5 "></div>
+            <h1 class="offset-5 log-head"> Login for VacStay</h1>
+            <div class="offset-4">
+                
+                <div class="col-8 mb-3">
+                    <label for="username" class="form-label user-inputs">Username</label>
+                    <input type="text" class="form-control user-inputs" id="username" name="username"  required>
+                    <div class="invalid-feedback">Please enter a username.</div>
+                </div>
+                <div class="col-8 mb-3">
+                    <label for="password" class="form-label user-inputs">Password</label>
+                    <input type="password" class="form-control user-inputs" id="password" name="password" required>
+                    <div class="invalid-feedback">Please enter a password.</div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary " type="submit">login</button>
+                </div>
+               
+            </div>
+            </div>
+                
+
+        </form>
+   
+</body>

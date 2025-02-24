@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top " >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/allListing"><i class="fa-brands fa-vine"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" >
+        <ul class="navbar-nav">
+         
+          <li class="nav-item">
+            <a class="nav-link" href="/allListing">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/allListing/new">Create your VacStay</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-circle-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu show2" >
+              <%if(!currentUser){%>
+                <li><a class="dropdown-item" href="/signUp">Signup</a></li>
+                <li><a class="dropdown-item" href="/login">Login</a></li>
+              <%}%>
+               <% if(currentUser){%>
+                  <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                <%}%>
+                
+            </ul>
+        </li>
+        <%if(!currentUser){%>
+          <li><a class="nav-link sign" href="/signUp">Signup</a></li>
+          <li><a class="nav-link sign" href="/login">Login</a></li>
+        <%}%>
+         <% if(currentUser){%>
+            <li><a class="nav-link sign" href="/logout">Logout</a></li>
+          <%}%>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  

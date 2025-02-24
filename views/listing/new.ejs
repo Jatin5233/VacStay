@@ -1,0 +1,62 @@
+<%-layout("./layouts/boilerplate.ejs")%>
+<body>
+   
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1 class="mt-4 log-head">Create a New Listing</h1>
+    <form action="/allListing" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+       
+            <div class="mb-3">
+                <label for="title" class="form-label new-inputs">Title:</label>
+                <input id="title" name="listing[title]" class="form-control new-inputs" placeholder="Enter the title of your listing" required>
+                <div class="invalid-feedback">
+                    Enter valid Title
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label new-inputs">Description:</label>
+                <textarea id="description" name="listing[description]" class="form-control new-inputs" placeholder="Enter a detailed description" required></textarea>
+                <div class="invalid-feedback">
+                    Enter valid Description
+                </div>
+            </div>
+           
+            <div class="mb-3">
+                <label for="image" class="form-label new-inputs">Image Link:</label>
+                <input type="file" id="image" name="listing[image]" class="form-control new-inputs" placeholder="Enter the image link" required>
+            </div>
+            <div class="mb-3">
+                <label for="location" class="form-label new-inputs">Location:</label>
+                <input type="text" id="location" name="listing[location]" class="form-control new-inputs" placeholder="Enter the location" required>
+                <div class="invalid-feedback">
+                    Enter valid Location
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3  col-md-4">
+                    <label for="price" class="form-label new-inputs">Price:</label>
+                    <input type="text" id="price" name="listing[price]" class="form-control new-inputs" placeholder="Enter the price" required>
+                    <div class="invalid-feedback">
+                        Enter valid Price
+                    </div>
+                </div>
+                <div class="mb-3 col-md-8">
+                    <label for="country" class="form-label new-inputs">Country:</label>
+                    <input type="text" id="country" name="listing[country]" class="form-control new-inputs" placeholder="Enter the country" required>
+                    <div class="invalid-feedback">
+                        Enter valid Country Name
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="mb-3">
+                <button type="submit" class=" btn btn-dark ">Submit Listing</button>
+            </div>
+        </form>
+        
+        </div>
+    </div>
+    
+
+</body>
