@@ -41,8 +41,16 @@ app.use(methodOverride("method"));
 app.use(express.static(path.join(__dirname,"/public")))
 app.engine("ejs",ejsMate)
 
+const mongoClientPromise = new Promise((resolve) => {
+    mongoose.connection.on("connected", () => {
+        const client = mongoose.connection.getClient();
+        resolve(client);
+    });
+});
+
 const store=MongoStore.create({
     mongoUrl:dbUrl,
+    clientPromise: mongoClientPromise,
     crypto:{
         secret:process.env.SECRET
     },
